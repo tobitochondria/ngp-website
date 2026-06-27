@@ -28,8 +28,8 @@ const navLinks = [
     label: 'ACCOMPLISHMENTS',
     href: '#',
     items: [
-      { label: 'Statistics', href: '#' },
-      { label: 'Sites & Contracts', href: '#' }
+      { label: 'Statistics', href: '/accomplishments/statistics', isRouter: true },
+      { label: 'Sites & Contracts', href: '/accomplishments/sites-contracts', isRouter: true }
     ]
   },
   {

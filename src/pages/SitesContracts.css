@@ -1,0 +1,78 @@
+/* ═══════════════════════════════════════════════════════════════════
+   SitesContracts.css
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Page Shell ─────────────────────────────────────────────────── */
+.sites-page {
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 80px; /* Spacer under fixed navbar */
+}
+
+/* ── Scroll Reveal ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(15px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+}
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Maintenance Card ───────────────────────────────────────────── */
+.sites-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 24px 60px;
+}
+
+.maintenance-card {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.maintenance-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(4rem, 8vw, 6.5rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #111111;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.maintenance-divider {
+  height: 6px;
+  width: 100%;
+  max-width: 480px;
+  background: #2e7d32;
+  margin: 18px auto;
+  border-radius: 2px;
+}
+
+.maintenance-subtitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #888888;
+  margin: 0;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sites-container {
+    padding: 80px 20px 48px;
+  }
+  .maintenance-divider {
+    height: 4px;
+    margin: 14px auto;
+  }
+}

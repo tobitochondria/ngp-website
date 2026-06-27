@@ -290,11 +290,14 @@
   margin-top: 8px;
   border: 1px solid #ccc;
   border-radius: var(--radius);
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .engp-targets__table {
   width: 100%;
+  min-width: 500px;
   border-collapse: collapse;
   background: #fff;
 }
