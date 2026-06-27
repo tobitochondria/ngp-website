@@ -1,0 +1,238 @@
+/* ═══════════════════════════════════════════════════════════════════
+   PriorityCommodity.css
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --ngp-green:   #1a4a1a;
+  --ngp-mid:     #2e7d32;
+  --text-body:   #333333;
+  --border:      #d0d8d0;
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --radius:      6px;
+  --radius-lg:   10px;
+  --shadow-sm:   0 2px 8px rgba(0,0,0,0.07);
+  --shadow-md:   0 6px 24px rgba(0,0,0,0.12);
+}
+
+/* ── Page Shell ─────────────────────────────────────────────────── */
+.species-page {
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* ── Scroll Reveal ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.6s var(--ease-out) var(--reveal-delay, 0ms),
+    transform 0.6s var(--ease-out) var(--reveal-delay, 0ms);
+}
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── Hero ───────────────────────────────────────────────────────── */
+.species-hero {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.species-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/hero-2.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  filter: brightness(0.85);
+}
+.species-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.60) 0%,
+    rgba(0,0,0,0.20) 60%,
+    transparent 100%
+  );
+}
+.species-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 48px 36px;
+}
+
+/* ── Breadcrumb ─────────────────────────────────────────────────── */
+.species-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.species-breadcrumb__link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.72);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.species-breadcrumb__link:hover { color: #fff; }
+.species-breadcrumb__sep { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+.species-breadcrumb__current { font-size: 0.75rem; font-weight: 600; color: #a5d6a7; }
+
+.species-hero__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+/* ── Body Wrapper ───────────────────────────────────────────────── */
+.species-body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── Section Wrapper ────────────────────────────────────────────── */
+.species-section {
+  padding: 56px 0;
+}
+
+/* ── Section Divider ────────────────────────────────────────────── */
+.species-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.species-divider__line { flex: 1; height: 1px; background: #d0d8d0; }
+.species-divider__mark {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #aabdaa;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+/* ── Species Item Layout ────────────────────────────────────────── */
+.species-item {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.species-item__img-wrap {
+  flex-shrink: 0;
+  width: 40%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.3s var(--ease-out);
+}
+.species-item__img-wrap:hover {
+  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+}
+.species-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s var(--ease-out);
+}
+.species-item__img-wrap:hover .species-item__img {
+  transform: scale(1.04);
+}
+
+.species-item__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.species-item__title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--ngp-green);
+  margin: 0 0 4px;
+  line-height: 1.25;
+}
+
+.species-item__subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-body);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.species-item__text p {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  margin: 0 0 14px;
+  text-align: justify;
+}
+.species-item__text p:last-child {
+  margin-bottom: 0;
+}
+
+.species-source {
+  color: var(--ngp-mid);
+  font-weight: 600;
+}
+
+/* Fuelwood lists */
+.species-highlight-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--ngp-green);
+  margin: 20px 0 10px;
+}
+.species-highlight-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.species-highlight-list li {
+  font-size: 0.93rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .species-body { padding: 0 32px; }
+
+  .species-item {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .species-item__img-wrap { width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .species-hero { height: 160px; }
+  .species-hero__content { padding: 0 24px 28px; }
+  .species-body { padding: 0 20px; }
+}

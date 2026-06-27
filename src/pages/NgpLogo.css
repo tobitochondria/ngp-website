@@ -1,0 +1,159 @@
+/* ═══════════════════════════════════════════════════════════════════
+   NgpLogo.css
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --ngp-green:   #1a4a1a;
+  --text-body:   #333333;
+  --border:      #d0d8d0;
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --radius:      6px;
+  --shadow-md:   0 6px 24px rgba(0,0,0,0.10);
+}
+
+/* ── Page Shell ─────────────────────────────────────────────────── */
+.logo-page {
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* ── Scroll Reveal ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s var(--ease-out) var(--reveal-delay, 0ms),
+    transform 0.6s var(--ease-out) var(--reveal-delay, 0ms);
+}
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── Hero ───────────────────────────────────────────────────────── */
+.logo-hero {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.logo-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/hero-1.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  filter: brightness(0.8);
+}
+.logo-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.60) 0%,
+    rgba(0,0,0,0.20) 60%,
+    transparent 100%
+  );
+}
+.logo-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 48px 36px;
+}
+
+/* ── Breadcrumb ─────────────────────────────────────────────────── */
+.logo-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.logo-breadcrumb__link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.72);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.logo-breadcrumb__link:hover { color: #fff; }
+.logo-breadcrumb__sep { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+.logo-breadcrumb__current { font-size: 0.75rem; font-weight: 600; color: #a5d6a7; }
+
+.logo-hero__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+/* ── Body Wrapper ───────────────────────────────────────────────── */
+.logo-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 48px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ── Logo Display ───────────────────────────────────────────────── */
+.logo-display {
+  display: flex;
+  justify-content: center;
+}
+.logo-display__img-wrap {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  padding: 10px;
+  background: #fff;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s var(--ease-out);
+}
+.logo-display__img-wrap:hover {
+  transform: scale(1.05);
+}
+.logo-display__img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Description ────────────────────────────────────────────────── */
+.logo-description {
+  width: 100%;
+}
+.logo-description__text-block p {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0 0 20px;
+}
+.logo-description__text-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .logo-hero { height: 160px; }
+  .logo-hero__content { padding: 0 24px 28px; }
+  .logo-body { padding: 40px 24px 48px; gap: 32px; }
+  .logo-display__img-wrap { width: 200px; height: 200px; }
+}

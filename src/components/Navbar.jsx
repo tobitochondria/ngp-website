@@ -1,17 +1,18 @@
 import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 const navLinks = [
-  { label: 'HOME', href: '#' },
+  { label: 'HOME', href: '/', isRouter: true },
   {
     label: 'ABOUT US',
     href: '#',
     items: [
-      { label: 'What is [E]NGP?', href: '#' },
-      { label: 'Expected Project Outcome', href: '#' },
-      { label: 'Strategies', href: '#' },
-      { label: 'Priority Commodity Species', href: '#' },
-      { label: 'NGP Logo', href: '#' }
+      { label: 'What is [E]NGP?', href: '/about/what-is-engp', isRouter: true },
+      { label: 'Expected Project Outcome', href: '/about/expected-outcomes', isRouter: true },
+      { label: 'Strategies', href: '/about/strategies', isRouter: true },
+      { label: 'Priority Commodity Species', href: '/about/priority-commodities', isRouter: true },
+      { label: 'NGP Logo', href: '/about/ngp-logo', isRouter: true }
     ]
   },
   {
@@ -118,27 +119,43 @@ export default function Navbar() {
             const hasDropdown = !!link.items
             return (
               <li key={link.label} className={`navbar__item ${hasDropdown ? 'navbar__item--has-dropdown' : ''}`} role="none">
-                <a
-                  href={link.href}
-                  className="navbar__link"
-                  role="menuitem"
-                  aria-haspopup={hasDropdown ? 'true' : undefined}
-                >
-                  {link.label}
-                  {hasDropdown && (
-                    <span className="navbar__chevron" aria-hidden="true">
-                      <ChevronDown />
-                    </span>
-                  )}
-                </a>
+                {link.isRouter ? (
+                  <Link
+                    to={link.href}
+                    className="navbar__link"
+                    role="menuitem"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="navbar__link"
+                    role="menuitem"
+                    aria-haspopup={hasDropdown ? 'true' : undefined}
+                  >
+                    {link.label}
+                    {hasDropdown && (
+                      <span className="navbar__chevron" aria-hidden="true">
+                        <ChevronDown />
+                      </span>
+                    )}
+                  </a>
+                )}
 
                 {hasDropdown && (
                   <ul className="navbar__dropdown" role="menu" aria-label={`${link.label} submenu`}>
                     {link.items.map((subItem) => (
                       <li key={subItem.label} role="none">
-                        <a href={subItem.href} className="navbar__dropdown-link" role="menuitem">
-                          {subItem.label}
-                        </a>
+                        {subItem.isRouter ? (
+                          <Link to={subItem.href} className="navbar__dropdown-link" role="menuitem">
+                            {subItem.label}
+                          </Link>
+                        ) : (
+                          <a href={subItem.href} className="navbar__dropdown-link" role="menuitem">
+                            {subItem.label}
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -235,17 +252,35 @@ export default function Navbar() {
                       <ul className={`navbar__drawer-submenu ${isOpen ? 'navbar__drawer-submenu--open' : ''}`}>
                         {link.items.map((subItem) => (
                           <li key={subItem.label}>
-                            <a
-                              href={subItem.href}
-                              className="navbar__drawer-sublink"
-                              onClick={() => setMobileMenuOpen(false)}
-                            >
-                              {subItem.label}
-                            </a>
+                            {subItem.isRouter ? (
+                              <Link
+                                to={subItem.href}
+                                className="navbar__drawer-sublink"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {subItem.label}
+                              </Link>
+                            ) : (
+                              <a
+                                href={subItem.href}
+                                className="navbar__drawer-sublink"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {subItem.label}
+                              </a>
+                            )}
                           </li>
                         ))}
                       </ul>
                     </>
+                  ) : link.isRouter ? (
+                    <Link
+                      to={link.href}
+                      className="navbar__drawer-link"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
                   ) : (
                     <a
                       href={link.href}

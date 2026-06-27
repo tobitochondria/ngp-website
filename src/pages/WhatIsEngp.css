@@ -1,0 +1,457 @@
+/* ═══════════════════════════════════════════════════════════════════
+   WhatIsEngp.css — matches reference site layout exactly
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Design Tokens ─────────────────────────────────────────────── */
+:root {
+  --ngp-dark:       #0d2b0d;
+  --ngp-green:      #1a4a1a;
+  --ngp-mid:        #2e7d32;
+  --ngp-light:      #4caf50;
+  --ngp-pale:       #e8f5e9;
+
+  --text-primary:   #1a1a1a;
+  --text-body:      #333333;
+
+  --bg-page:        #ffffff;
+  --border:         #d4e4d4;
+
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md:      0 6px 24px rgba(0,0,0,0.10);
+
+  --radius:         6px;
+  --radius-pill:    999px;
+  --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Page Shell ─────────────────────────────────────────────────── */
+
+.engp-page {
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* ── Scroll Reveal ──────────────────────────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s var(--ease-out) var(--reveal-delay, 0ms),
+    transform 0.6s var(--ease-out) var(--reveal-delay, 0ms);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Hero Banner ────────────────────────────────────────────────── */
+
+.engp-hero {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.engp-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/hero-3.jpg');
+  background-size: cover;
+  background-position: center 35%;
+}
+
+.engp-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 43, 13, 0.82) 0%,
+    rgba(26, 74, 26, 0.60) 50%,
+    rgba(46, 125, 50, 0.32) 100%
+  );
+}
+
+.engp-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px 36px;
+}
+
+.engp-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.engp-breadcrumb__link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.engp-breadcrumb__link:hover {
+  color: #fff;
+}
+
+.engp-breadcrumb__sep {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.engp-breadcrumb__current {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #a5d6a7;
+}
+
+.engp-hero__title {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  margin: 0 0 8px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+
+.engp-hero__subtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.78);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ── Body Wrapper ───────────────────────────────────────────────── */
+
+.engp-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+/* ── Logos Row ──────────────────────────────────────────────────── */
+
+.engp-logos-row {
+  padding: 52px 0 36px;
+  display: flex;
+  justify-content: center;
+}
+
+.engp-logos-row__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.engp-logos-row__img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.25s;
+}
+
+.engp-logos-row__img:hover {
+  transform: scale(1.06);
+}
+
+/* ── Section Block ──────────────────────────────────────────────── */
+
+.engp-section {
+  padding: 44px 0;
+}
+
+.engp-section__heading {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--ngp-green);
+  margin: 0 0 24px;
+  line-height: 1.25;
+}
+
+/* ── Text Block ─────────────────────────────────────────────────── */
+
+.engp-text-block p {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0 0 14px;
+}
+
+.engp-text-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Section Divider ────────────────────────────────────────────── */
+
+.engp-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 8px 0;
+}
+
+.engp-divider__line {
+  flex: 1;
+  height: 1px;
+  background: #d0d8d0;
+}
+
+.engp-divider__mark {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #aabdaa;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+/* ── Pillars ────────────────────────────────────────────────────── */
+
+.engp-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  margin-top: 12px;
+}
+
+.engp-pillar {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.engp-pillar__img-wrap {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.engp-pillar__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  object-fit: cover;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.engp-pillar:hover .engp-pillar__img {
+  transform: scale(1.03);
+}
+
+.engp-pillar__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.engp-pillar__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ngp-green);
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.engp-pillar__text {
+  font-size: 0.93rem;
+  color: var(--text-body);
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0 0 12px;
+}
+
+.engp-pillar__text:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Targets Table ──────────────────────────────────────────────── */
+
+.engp-targets__table-wrap {
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.engp-targets__table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.engp-targets__table thead th {
+  padding: 10px 18px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-body);
+  background: #f5f5f5;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.engp-targets__table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.15s;
+}
+
+.engp-targets__table tbody tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+.engp-targets__table tbody tr:nth-child(even) {
+  background: #ffffff;
+}
+
+.engp-targets__table tbody tr:hover {
+  background: #eef5ee;
+}
+
+.engp-targets__table tbody td {
+  padding: 11px 18px;
+  font-size: 0.9rem;
+  color: var(--text-body);
+}
+
+.engp-targets__row--total {
+  background: #fff !important;
+  border-top: 2px solid #aaa;
+}
+
+.engp-targets__row--total td {
+  font-size: 0.93rem;
+  color: var(--text-primary);
+}
+
+.engp-targets__footnote {
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* ── Objectives Grid ────────────────────────────────────────────── */
+
+.engp-objectives__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.engp-objective-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-align: center;
+  transition: box-shadow 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+
+.engp-objective-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.engp-objective-card__icon {
+  width: 88px;
+  height: 88px;
+}
+
+.engp-objective-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s;
+}
+
+.engp-objective-card:hover .engp-objective-card__img {
+  transform: scale(1.08);
+}
+
+.engp-objective-card__label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ngp-green);
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .engp-hero {
+    height: 160px;
+  }
+
+  .engp-hero__content {
+    padding: 0 24px 40px;
+  }
+
+  .engp-body {
+    padding: 0 20px 60px;
+  }
+
+  .engp-logos-row__img {
+    height: 70px;
+  }
+
+  .engp-logos-row__inner {
+    gap: 24px;
+  }
+
+  .engp-pillar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .engp-pillar__img-wrap {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .engp-objectives__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .engp-objectives__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .engp-logos-row__img {
+    height: 56px;
+  }
+
+  .engp-logos-row__inner {
+    gap: 16px;
+  }
+}

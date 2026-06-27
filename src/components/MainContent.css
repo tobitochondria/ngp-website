@@ -551,9 +551,9 @@
 }
 
 .widget__img--trivia {
-  object-fit: cover;
   width: 100%;
-  max-height: 280px;
+  height: auto;
+  display: block;
 }
 
 /* YouTube video */

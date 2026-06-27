@@ -1,0 +1,404 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Strategies.css
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --ngp-green:   #1a4a1a;
+  --ngp-mid:     #2e7d32;
+  --text-body:   #333333;
+  --border:      #d0d8d0;
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --radius:      6px;
+  --radius-lg:   10px;
+  --shadow-sm:   0 2px 8px rgba(0,0,0,0.07);
+  --shadow-md:   0 6px 24px rgba(0,0,0,0.12);
+}
+
+/* ── Page Shell ─────────────────────────────────────────────────── */
+.strat-page {
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* ── Scroll Reveal ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.6s var(--ease-out) var(--reveal-delay, 0ms),
+    transform 0.6s var(--ease-out) var(--reveal-delay, 0ms);
+}
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── Hero ───────────────────────────────────────────────────────── */
+.strat-hero {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.strat-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/hero-3.jpg');
+  background-size: cover;
+  background-position: center 50%;
+  filter: brightness(0.85);
+}
+.strat-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.60) 0%,
+    rgba(0,0,0,0.20) 60%,
+    transparent 100%
+  );
+}
+.strat-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 48px 36px;
+}
+
+/* ── Breadcrumb ─────────────────────────────────────────────────── */
+.strat-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.strat-breadcrumb__link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.72);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.strat-breadcrumb__link:hover { color: #fff; }
+.strat-breadcrumb__sep { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+.strat-breadcrumb__current { font-size: 0.75rem; font-weight: 600; color: #a5d6a7; }
+
+.strat-hero__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+/* ── Body Wrapper ───────────────────────────────────────────────── */
+.strat-body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 48px 0;
+}
+
+/* ── Section Wrapper ────────────────────────────────────────────── */
+.strat-section {
+  padding: 56px 0;
+}
+
+/* ── Section Divider ────────────────────────────────────────────── */
+.strat-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.strat-divider__line { flex: 1; height: 1px; background: #d0d8d0; }
+.strat-divider__mark {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #aabdaa;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 1: Harmonizing of Initiatives
+   ───────────────────────────────────────────────────────────────── */
+.strat-harmonize {
+  display: flex;
+  gap: 52px;
+  align-items: flex-start;
+}
+
+.strat-harmonize__img-wrap {
+  flex-shrink: 0;
+  width: 42%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.3s var(--ease-out);
+}
+.strat-harmonize__img-wrap:hover {
+  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+}
+.strat-harmonize__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s var(--ease-out);
+}
+.strat-harmonize__img-wrap:hover .strat-harmonize__img {
+  transform: scale(1.04);
+}
+
+.strat-harmonize__body {
+  flex: 1;
+  padding-top: 8px;
+}
+.strat-harmonize__title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--ngp-green);
+  margin: 0 0 6px;
+  line-height: 1.25;
+}
+.strat-harmonize__subtitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-body);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.strat-harmonize__list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.strat-harmonize__list li {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 2: Provision of Incentives
+   ───────────────────────────────────────────────────────────────── */
+.strat-incentives-section {
+  text-align: center;
+}
+.strat-incentives-section__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--ngp-green);
+  margin: 0 0 10px;
+}
+.strat-incentives-section__sub {
+  font-size: 0.9rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 36px;
+  line-height: 1.65;
+}
+
+.strat-incentives__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.strat-incentive-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.28s var(--ease-out), transform 0.28s var(--ease-out);
+}
+.strat-incentive-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+.strat-incentive-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: #e8ede8;
+}
+.strat-incentive-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s var(--ease-out);
+}
+.strat-incentive-card:hover .strat-incentive-card__img {
+  transform: scale(1.06);
+}
+.strat-incentive-card__label {
+  padding: 10px 10px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-body);
+  text-align: center;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   SECTION 3: Maximization of Science & Technology (full bleed)
+   ───────────────────────────────────────────────────────────────── */
+.strat-science {
+  position: relative;
+  padding: 72px 0 80px;
+  margin-top: 0;
+}
+.strat-science__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/hero-2.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  background-attachment: fixed;
+}
+.strat-science__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 35, 10, 0.72);
+}
+.strat-science__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.strat-science__title {
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  line-height: 1.3;
+  margin: 0 0 48px;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.strat-science__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Science card — image top, text below on semi-transparent dark bg */
+.strat-science-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: background 0.3s, transform 0.3s var(--ease-out), box-shadow 0.3s;
+}
+.strat-science-card:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+.strat-science-card__img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.strat-science-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s var(--ease-out);
+}
+.strat-science-card:hover .strat-science-card__img {
+  transform: scale(1.06);
+}
+.strat-science-card__img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.45) 100%);
+}
+
+.strat-science-card__body {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.strat-science-card__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+}
+.strat-science-card__title-bar {
+  width: 36px;
+  height: 3px;
+  background: #4caf50;
+  border-radius: 2px;
+}
+.strat-science-card__text {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .strat-body { padding: 0 32px 0; }
+
+  .strat-harmonize {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .strat-harmonize__img-wrap { width: 100%; }
+
+  .strat-incentives__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .strat-science__inner { padding: 0 32px; }
+  .strat-science__grid { grid-template-columns: 1fr 1fr; gap: 18px; }
+}
+
+@media (max-width: 640px) {
+  .strat-hero { height: 160px; }
+  .strat-hero__content { padding: 0 24px 28px; }
+  .strat-body { padding: 0 20px 0; }
+  .strat-divider { padding: 0 20px; }
+
+  .strat-incentives__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .strat-science__inner { padding: 0 20px; }
+  .strat-science__grid { grid-template-columns: 1fr; }
+}
