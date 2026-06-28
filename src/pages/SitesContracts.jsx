@@ -247,7 +247,10 @@ export default function SitesContracts() {
           
           {/* ── Project Sites Section ─────────────────────────────────── */}
           <RevealSection className="sites-section">
-            <h2 className="sites-section__title">Project Sites</h2>
+            <div className="contracts-header-block">
+              <h2 className="sites-section__title">Project Sites</h2>
+              <p className="contracts-section__subtitle">Click on the pin in the map for information about project site</p>
+            </div>
             <div className="map-wrapper">
               <div id="map-container" className="sites-map-element" style={{ height: '500px', width: '100%' }}></div>
             </div>
@@ -325,7 +328,7 @@ export default function SitesContracts() {
                           {groupedByYear[year].map(c => (
                             <tr key={c.id}>
                               <td className="font-semibold">
-                                <a href={`#contract-${c.id}`} className="contract-table-link" onClick={(e) => e.preventDefault()}>
+                                <a href="/Sample Contract.pdf" target="_blank" rel="noopener noreferrer" className="contract-table-link">
                                   {c.name}
                                 </a>
                               </td>
@@ -364,7 +367,7 @@ export default function SitesContracts() {
                           {groupedByRegion[region].map(c => (
                             <tr key={c.id}>
                               <td className="font-semibold">
-                                <a href={`#contract-${c.id}`} className="contract-table-link" onClick={(e) => e.preventDefault()}>
+                                <a href="/Sample Contract.pdf" target="_blank" rel="noopener noreferrer" className="contract-table-link">
                                   {c.name}
                                 </a>
                               </td>

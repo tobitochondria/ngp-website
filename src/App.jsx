@@ -11,6 +11,7 @@ import PriorityCommodity from './pages/PriorityCommodity'
 import NgpLogo from './pages/NgpLogo'
 import Statistics from './pages/Statistics'
 import SitesContracts from './pages/SitesContracts'
+import ContactUs from './pages/ContactUs'
 import NotFound from './pages/NotFound'
 import './App.css'
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/about/ngp-logo" element={<NgpLogo />} />
         <Route path="/accomplishments/statistics" element={<Statistics />} />
         <Route path="/accomplishments/sites-contracts" element={<SitesContracts />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
