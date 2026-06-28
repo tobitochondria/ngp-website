@@ -1,0 +1,442 @@
+/* ═══════════════════════════════════════════════════════════════════
+   SitesContracts.css
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --ngp-green:       #1a4a1a;
+  --ngp-mid:         #2e7d32;
+  --ngp-green-light: #e8f2e8;
+  --ngp-green-mid:   #256325;
+  --text-primary:    #1a1a1a;
+  --text-body:       #333333;
+  --text-muted:      #666666;
+  --border:          #cccccc;
+  --border-light:    #e0e0e0;
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+  --radius:          6px;
+  --shadow-md:       0 6px 24px rgba(0,0,0,0.09);
+  --shadow-sm:       0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ── Page Shell ─────────────────────────────────────────────────── */
+.sites-page {
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* ── Scroll Reveal ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s var(--ease-out) var(--reveal-delay, 0ms),
+    transform 0.6s var(--ease-out) var(--reveal-delay, 0ms);
+}
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── Hero ───────────────────────────────────────────────────────── */
+.sites-hero {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.sites-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/GIS.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  filter: brightness(0.75);
+}
+.sites-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.60) 0%,
+    rgba(0,0,0,0.20) 60%,
+    transparent 100%
+  );
+}
+.sites-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 48px 36px;
+}
+
+/* ── Breadcrumb ─────────────────────────────────────────────────── */
+.sites-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.sites-breadcrumb__link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.72);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.sites-breadcrumb__link:hover { color: #fff; }
+.sites-breadcrumb__sep { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+.sites-breadcrumb__current { font-size: 0.75rem; font-weight: 600; color: #a5d6a7; }
+
+/* ── Title ──────────────────────────────────────────────────────── */
+.sites-hero__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+/* ── Container ──────────────────────────────────────────────────── */
+.sites-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 48px 80px;
+}
+
+/* ── Project Sites Section ──────────────────────────────────────── */
+.sites-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sites-section__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.sites-section__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--ngp-mid);
+  border-radius: 2px;
+}
+
+.map-wrapper {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+  overflow: hidden;
+}
+
+.map-wrapper:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--ngp-mid);
+}
+
+.sites-map-element {
+  border-radius: calc(var(--radius) - 2px);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ── Leaflet Style Overrides ────────────────────────────────────── */
+.leaflet-tooltip {
+  background: #ffffff !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow-sm) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  padding: 6px 10px !important;
+}
+
+.map-tooltip strong {
+  color: var(--ngp-green);
+  font-size: 0.85rem;
+  display: block;
+}
+
+.map-tooltip span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow-md) !important;
+  border: 1px solid var(--border) !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+.map-popup h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: var(--ngp-green);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 6px;
+  font-weight: 700;
+}
+
+.map-popup table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.map-popup th {
+  text-align: left;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 2px 0;
+}
+
+.map-popup td {
+  text-align: right;
+  color: var(--text-body);
+  font-weight: 600;
+  padding: 2px 0;
+}
+
+/* ── Contracts Section ──────────────────────────────────────────── */
+.contracts-section-container {
+  margin-top: 56px;
+}
+
+.contracts-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contracts-section__subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.contract-table-link {
+  color: var(--ngp-mid);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.contract-table-link:hover {
+  color: var(--ngp-green);
+  text-decoration: underline;
+}
+
+.contracts-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contracts-tabs-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.contracts-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.contracts-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #e0e0e0;
+  color: #222;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: all 0.22s var(--ease-out);
+}
+
+.contracts-tab:hover {
+  background: #d5d5d5;
+}
+
+.contracts-tab--active {
+  background: var(--ngp-mid) !important;
+  color: #fff !important;
+}
+
+.contracts-tab__arrow {
+  font-size: 0.55rem;
+  opacity: 0.85;
+}
+
+.contracts-search-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  overflow: hidden;
+}
+
+.contracts-search-input {
+  border: none;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  width: 240px;
+  outline: none;
+}
+
+.contracts-search-btn {
+  background: #2e7d32;
+  border: none;
+  color: #fff;
+  padding: 9px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.contracts-search-btn:hover {
+  background: #1b5e20;
+}
+
+.contracts-search-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* ── Group & Tables ──────────────────────────────────────────────── */
+.contract-group {
+  margin-bottom: 40px;
+}
+
+.contract-group-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+  border-left: 4px solid var(--ngp-mid);
+  padding-left: 12px;
+}
+
+.contracts-table-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+}
+
+.contracts-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.contracts-table th {
+  background: #f2f2f2;
+  color: var(--text-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.contracts-table td {
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: var(--text-body);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.contracts-table tbody tr:nth-child(even) {
+  background: #fcfcfc;
+}
+
+.contracts-table tbody tr:hover {
+  background: #f5f9f5;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+/* ── Badges ──────────────────────────────────────────────────────── */
+.contract-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.badge--active {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.badge--ongoing-maintenance {
+  background: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #bbdefb;
+}
+
+.badge--completed {
+  background: #f5f5f5;
+  color: #616161;
+  border: 1px solid #e0e0e0;
+}
+
+.contracts-empty-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* ── Responsive Styling ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sites-page { padding-top: 70px; }
+  .sites-hero { height: 160px; }
+  .sites-hero__content { padding: 0 24px 28px; }
+  .sites-container { padding: 40px 24px 60px; }
+  .contracts-toolbar { flex-direction: column; align-items: stretch; }
+  .contracts-search-input { width: 100%; }
+}
