@@ -1,9 +1,9 @@
 /* ═══════════════════════════════════════════════════════════════════
-   SitesContracts.css
+   NotFound.css
    ═══════════════════════════════════════════════════════════════════ */
 
 /* ── Page Shell ─────────────────────────────────────────────────── */
-.sites-page {
+.notfound-page {
   background: #fff;
   min-height: 100vh;
   padding-top: 80px; /* Spacer under fixed navbar */
@@ -23,7 +23,7 @@
 }
 
 /* ── Maintenance Card ───────────────────────────────────────────── */
-.sites-container {
+.notfound-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +68,7 @@
 
 /* ── Responsive ─────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .sites-container {
+  .notfound-container {
     padding: 80px 20px 48px;
   }
   .maintenance-divider {

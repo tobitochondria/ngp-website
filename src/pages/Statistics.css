@@ -358,6 +358,11 @@
 .legend-dot--persons { background: #7b8e5c; }
 .legend-dot--jobs { background: #e3e7e8; }
 
+/* Regional chart specific legend */
+.legend-dot--reg-target { background: #7b8e5c; }
+.legend-dot--reg-planted { background: #2e7d32; }
+.legend-dot--reg-seedlings { background: #d1d9e6; border: 1px solid #c0c8d6; }
+
 .svg-container {
   width: 100%;
   overflow-x: auto;
@@ -479,6 +484,21 @@
 
 .tooltip-metric.jobs strong {
   color: #888888;
+}
+
+.stats-table--regional-data {
+  min-width: 1400px !important;
+}
+
+.stats-table--regional-data thead th {
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.stats-table--regional-data tbody td {
+  padding: 8px 10px;
+  font-size: 0.82rem;
 }
 
 /* ── Responsive ─────────────────────────────────────────────────── */

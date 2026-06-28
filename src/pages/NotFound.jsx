@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import CommentForm from '../components/CommentForm'
-import './SitesContracts.css'
+import './NotFound.css'
 
 // ─── Scroll Reveal Hook ────────────────────────────────────────────────────────
 
@@ -39,12 +39,12 @@ function Reveal({ className = '', children, delay = 0 }) {
 
 // ─── Page Component ────────────────────────────────────────────────────────────
 
-export default function SitesContracts() {
+export default function NotFound() {
   return (
-    <div className="sites-page">
+    <div className="notfound-page">
 
       {/* Main content area */}
-      <main className="sites-container">
+      <main className="notfound-container">
         <Reveal className="maintenance-card">
           <h1 className="maintenance-title">SOON!</h1>
           <div className="maintenance-divider" aria-hidden="true" />

@@ -19,9 +19,9 @@ const navLinks = [
     label: 'REFERENCES',
     href: '#',
     items: [
-      { label: 'Issuances & Legal Bases', href: '#' },
-      { label: 'Memorandum of Agreement', href: '#' },
-      { label: 'NSIC Registered Varieties', href: '#' }
+      { label: 'Issuances & Legal Bases', href: '/references/issuances', isRouter: true },
+      { label: 'Memorandum of Agreement', href: '/references/moa', isRouter: true },
+      { label: 'NSIC Registered Varieties', href: '/references/nsic-varieties', isRouter: true }
     ]
   },
   {
@@ -36,27 +36,27 @@ const navLinks = [
     label: 'MAPS & PHOTOS',
     href: '#',
     items: [
-      { label: 'NGP/ENGP Sites', href: '#' },
-      { label: 'ERDB Sites', href: '#' },
-      { label: 'DAR-DENR Sites', href: '#' },
-      { label: 'Proposed NGP Sites (2023)', href: '#' },
-      { label: 'NGP Geotagged Photos', href: '#' },
-      { label: 'Bamboo', href: '#' }
+      { label: 'NGP/ENGP Sites', href: '/maps/ngp-engp-sites', isRouter: true },
+      { label: 'ERDB Sites', href: '/maps/erdb-sites', isRouter: true },
+      { label: 'DAR-DENR Sites', href: '/maps/dar-denr-sites', isRouter: true },
+      { label: 'Proposed NGP Sites (2023)', href: '/maps/proposed-ngp-sites', isRouter: true },
+      { label: 'NGP Geotagged Photos', href: '/maps/geotagged-photos', isRouter: true },
+      { label: 'Bamboo', href: '/maps/bamboo', isRouter: true }
     ]
   },
   {
     label: 'EVENTS & STORIES',
     href: '#',
     items: [
-      { label: 'Bamboo Month', href: '#' },
-      { label: 'ENGP Stories', href: '#' },
-      { label: 'Regional Stories', href: '#' },
-      { label: 'Regional Gallery', href: '#' },
-      { label: 'Photo Gallery', href: '#' },
-      { label: 'Video Gallery', href: '#' }
+      { label: 'Bamboo Month', href: '/events/bamboo-month', isRouter: true },
+      { label: 'ENGP Stories', href: '/events/engp-stories', isRouter: true },
+      { label: 'Regional Stories', href: '/events/regional-stories', isRouter: true },
+      { label: 'Regional Gallery', href: '/events/regional-gallery', isRouter: true },
+      { label: 'Photo Gallery', href: '/events/photo-gallery', isRouter: true },
+      { label: 'Video Gallery', href: '/events/video-gallery', isRouter: true }
     ]
   },
-  { label: 'CONTACT US', href: '#' }
+  { label: 'CONTACT US', href: '/contact-us', isRouter: true }
 ]
 
 function SearchIcon() {

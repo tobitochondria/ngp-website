@@ -95,9 +95,9 @@
 
 /* Gov seal */
 .footer__gov-seal img {
-  height: 80px;
+  height: 150px;
   width: auto;
-  opacity: 0.35;
+  opacity: 0.85;
   filter: grayscale(1);
   display: block;
 }

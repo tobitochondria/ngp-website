@@ -1,0 +1,930 @@
+{
+  "NCR": {
+    "2011": {
+      "planted": 330,
+      "seedlings": 164885
+    },
+    "2012": {
+      "planted": 918,
+      "seedlings": 228888
+    },
+    "2013": {
+      "planted": 801,
+      "seedlings": 60045
+    },
+    "2014": {
+      "planted": 51,
+      "seedlings": 34310
+    },
+    "2015": {
+      "planted": 89,
+      "seedlings": 50817
+    },
+    "2016": {
+      "planted": 372,
+      "seedlings": 190937
+    },
+    "2017": {
+      "planted": 408,
+      "seedlings": 135592
+    },
+    "2018": {
+      "planted": 280,
+      "seedlings": 102722
+    },
+    "2019": {
+      "planted": 43,
+      "seedlings": 19240
+    },
+    "2020": {
+      "planted": 94,
+      "seedlings": 27691
+    },
+    "2021": {
+      "planted": 190,
+      "seedlings": 52657
+    },
+    "2022": {
+      "planted": 91,
+      "seedlings": 25570
+    },
+    "2023": {
+      "planted": 34,
+      "seedlings": 6432
+    },
+    "2024": {
+      "planted": 38,
+      "seedlings": 7895
+    }
+  },
+  "CAR": {
+    "2011": {
+      "planted": 6807,
+      "seedlings": 3481222
+    },
+    "2012": {
+      "planted": 9464,
+      "seedlings": 4778184
+    },
+    "2013": {
+      "planted": 20414,
+      "seedlings": 9983593
+    },
+    "2014": {
+      "planted": 24180,
+      "seedlings": 12391491
+    },
+    "2015": {
+      "planted": 17558,
+      "seedlings": 10552695
+    },
+    "2016": {
+      "planted": 13525,
+      "seedlings": 22531070
+    },
+    "2017": {
+      "planted": 14664,
+      "seedlings": 11837090
+    },
+    "2018": {
+      "planted": 10053,
+      "seedlings": 8967575
+    },
+    "2019": {
+      "planted": 1560,
+      "seedlings": 1679633
+    },
+    "2020": {
+      "planted": 3360,
+      "seedlings": 2417413
+    },
+    "2021": {
+      "planted": 6806,
+      "seedlings": 4596896
+    },
+    "2022": {
+      "planted": 3272,
+      "seedlings": 2232286
+    },
+    "2023": {
+      "planted": 1220,
+      "seedlings": 561536
+    },
+    "2024": {
+      "planted": 1350,
+      "seedlings": 689206
+    }
+  },
+  "Region 1": {
+    "2011": {
+      "planted": 5080,
+      "seedlings": 2547110
+    },
+    "2012": {
+      "planted": 7424,
+      "seedlings": 3993867
+    },
+    "2013": {
+      "planted": 12851,
+      "seedlings": 9753439
+    },
+    "2014": {
+      "planted": 13396,
+      "seedlings": 9826923
+    },
+    "2015": {
+      "planted": 18995,
+      "seedlings": 17536433
+    },
+    "2016": {
+      "planted": 6305,
+      "seedlings": 9743862
+    },
+    "2017": {
+      "planted": 10215,
+      "seedlings": 9920547
+    },
+    "2018": {
+      "planted": 7003,
+      "seedlings": 7515635
+    },
+    "2019": {
+      "planted": 1087,
+      "seedlings": 1407684
+    },
+    "2020": {
+      "planted": 2340,
+      "seedlings": 2026010
+    },
+    "2021": {
+      "planted": 4741,
+      "seedlings": 3852613
+    },
+    "2022": {
+      "planted": 2279,
+      "seedlings": 1870856
+    },
+    "2023": {
+      "planted": 850,
+      "seedlings": 470618
+    },
+    "2024": {
+      "planted": 941,
+      "seedlings": 577617
+    }
+  },
+  "Region 2": {
+    "2011": {
+      "planted": 4303,
+      "seedlings": 2077688
+    },
+    "2012": {
+      "planted": 6777,
+      "seedlings": 3429060
+    },
+    "2013": {
+      "planted": 15320,
+      "seedlings": 7732366
+    },
+    "2014": {
+      "planted": 15060,
+      "seedlings": 7860551
+    },
+    "2015": {
+      "planted": 18458,
+      "seedlings": 15579230
+    },
+    "2016": {
+      "planted": 9770,
+      "seedlings": 16273231
+    },
+    "2017": {
+      "planted": 11114,
+      "seedlings": 9837041
+    },
+    "2018": {
+      "planted": 7619,
+      "seedlings": 7452372
+    },
+    "2019": {
+      "planted": 1182,
+      "seedlings": 1395835
+    },
+    "2020": {
+      "planted": 2546,
+      "seedlings": 2008956
+    },
+    "2021": {
+      "planted": 5158,
+      "seedlings": 3820183
+    },
+    "2022": {
+      "planted": 2480,
+      "seedlings": 1855108
+    },
+    "2023": {
+      "planted": 925,
+      "seedlings": 466657
+    },
+    "2024": {
+      "planted": 1024,
+      "seedlings": 572755
+    }
+  },
+  "Region 3": {
+    "2011": {
+      "planted": 5740,
+      "seedlings": 2867953
+    },
+    "2012": {
+      "planted": 8447,
+      "seedlings": 3925789
+    },
+    "2013": {
+      "planted": 19825,
+      "seedlings": 9538622
+    },
+    "2014": {
+      "planted": 22343,
+      "seedlings": 12045165
+    },
+    "2015": {
+      "planted": 20613,
+      "seedlings": 13715943
+    },
+    "2016": {
+      "planted": 12736,
+      "seedlings": 20790189
+    },
+    "2017": {
+      "planted": 14307,
+      "seedlings": 11682045
+    },
+    "2018": {
+      "planted": 9807,
+      "seedlings": 8850116
+    },
+    "2019": {
+      "planted": 1522,
+      "seedlings": 1657633
+    },
+    "2020": {
+      "planted": 3278,
+      "seedlings": 2385749
+    },
+    "2021": {
+      "planted": 6640,
+      "seedlings": 4536685
+    },
+    "2022": {
+      "planted": 3192,
+      "seedlings": 2203047
+    },
+    "2023": {
+      "planted": 1191,
+      "seedlings": 554181
+    },
+    "2024": {
+      "planted": 1317,
+      "seedlings": 680179
+    }
+  },
+  "Region 4A": {
+    "2011": {
+      "planted": 5679,
+      "seedlings": 3412661
+    },
+    "2012": {
+      "planted": 8907,
+      "seedlings": 5353775
+    },
+    "2013": {
+      "planted": 22332,
+      "seedlings": 15811733
+    },
+    "2014": {
+      "planted": 21535,
+      "seedlings": 12192725
+    },
+    "2015": {
+      "planted": 22009,
+      "seedlings": 19322350
+    },
+    "2016": {
+      "planted": 20821,
+      "seedlings": 25154557
+    },
+    "2017": {
+      "planted": 16153,
+      "seedlings": 15093594
+    },
+    "2018": {
+      "planted": 11073,
+      "seedlings": 11434647
+    },
+    "2019": {
+      "planted": 1718,
+      "seedlings": 2141717
+    },
+    "2020": {
+      "planted": 3701,
+      "seedlings": 3082468
+    },
+    "2021": {
+      "planted": 7497,
+      "seedlings": 5861549
+    },
+    "2022": {
+      "planted": 3604,
+      "seedlings": 2846410
+    },
+    "2023": {
+      "planted": 1344,
+      "seedlings": 716021
+    },
+    "2024": {
+      "planted": 1488,
+      "seedlings": 878814
+    }
+  },
+  "Region 4B": {
+    "2011": {
+      "planted": 5150,
+      "seedlings": 2475495
+    },
+    "2012": {
+      "planted": 6045,
+      "seedlings": 1930537
+    },
+    "2013": {
+      "planted": 15894,
+      "seedlings": 9167726
+    },
+    "2014": {
+      "planted": 19160,
+      "seedlings": 10230696
+    },
+    "2015": {
+      "planted": 27040,
+      "seedlings": 12750081
+    },
+    "2016": {
+      "planted": 19336,
+      "seedlings": 32213951
+    },
+    "2017": {
+      "planted": 14772,
+      "seedlings": 12775283
+    },
+    "2018": {
+      "planted": 10127,
+      "seedlings": 9678334
+    },
+    "2019": {
+      "planted": 1571,
+      "seedlings": 1812759
+    },
+    "2020": {
+      "planted": 3385,
+      "seedlings": 2609014
+    },
+    "2021": {
+      "planted": 6856,
+      "seedlings": 4961240
+    },
+    "2022": {
+      "planted": 3296,
+      "seedlings": 2409214
+    },
+    "2023": {
+      "planted": 1229,
+      "seedlings": 606043
+    },
+    "2024": {
+      "planted": 1360,
+      "seedlings": 743832
+    }
+  },
+  "Region 5": {
+    "2011": {
+      "planted": 6320,
+      "seedlings": 4065005
+    },
+    "2012": {
+      "planted": 7559,
+      "seedlings": 4072053
+    },
+    "2013": {
+      "planted": 22096,
+      "seedlings": 13462875
+    },
+    "2014": {
+      "planted": 20500,
+      "seedlings": 12517681
+    },
+    "2015": {
+      "planted": 26899,
+      "seedlings": 8136190
+    },
+    "2016": {
+      "planted": 9482,
+      "seedlings": 10800486
+    },
+    "2017": {
+      "planted": 14809,
+      "seedlings": 9856020
+    },
+    "2018": {
+      "planted": 10152,
+      "seedlings": 7466751
+    },
+    "2019": {
+      "planted": 1575,
+      "seedlings": 1398528
+    },
+    "2020": {
+      "planted": 3393,
+      "seedlings": 2012832
+    },
+    "2021": {
+      "planted": 6873,
+      "seedlings": 3827554
+    },
+    "2022": {
+      "planted": 3305,
+      "seedlings": 1858688
+    },
+    "2023": {
+      "planted": 1232,
+      "seedlings": 467557
+    },
+    "2024": {
+      "planted": 1364,
+      "seedlings": 573860
+    }
+  },
+  "Region 6": {
+    "2011": {
+      "planted": 3963,
+      "seedlings": 2028746
+    },
+    "2012": {
+      "planted": 8324,
+      "seedlings": 4364595
+    },
+    "2013": {
+      "planted": 11143,
+      "seedlings": 6275913
+    },
+    "2014": {
+      "planted": 12108,
+      "seedlings": 7688614
+    },
+    "2015": {
+      "planted": 16694,
+      "seedlings": 10879899
+    },
+    "2016": {
+      "planted": 12276,
+      "seedlings": 20500879
+    },
+    "2017": {
+      "planted": 10288,
+      "seedlings": 9611610
+    },
+    "2018": {
+      "planted": 7053,
+      "seedlings": 7281590
+    },
+    "2019": {
+      "planted": 1094,
+      "seedlings": 1363847
+    },
+    "2020": {
+      "planted": 2357,
+      "seedlings": 1962917
+    },
+    "2021": {
+      "planted": 4775,
+      "seedlings": 3732638
+    },
+    "2022": {
+      "planted": 2296,
+      "seedlings": 1812596
+    },
+    "2023": {
+      "planted": 856,
+      "seedlings": 455962
+    },
+    "2024": {
+      "planted": 947,
+      "seedlings": 559629
+    }
+  },
+  "Region 7": {
+    "2011": {
+      "planted": 5732,
+      "seedlings": 4035568
+    },
+    "2012": {
+      "planted": 6990,
+      "seedlings": 5566449
+    },
+    "2013": {
+      "planted": 25579,
+      "seedlings": 14465982
+    },
+    "2014": {
+      "planted": 18205,
+      "seedlings": 11216138
+    },
+    "2015": {
+      "planted": 20428,
+      "seedlings": 13779616
+    },
+    "2016": {
+      "planted": 15191,
+      "seedlings": 25323780
+    },
+    "2017": {
+      "planted": 14693,
+      "seedlings": 13819146
+    },
+    "2018": {
+      "planted": 10072,
+      "seedlings": 10469147
+    },
+    "2019": {
+      "planted": 1563,
+      "seedlings": 1960879
+    },
+    "2020": {
+      "planted": 3366,
+      "seedlings": 2822196
+    },
+    "2021": {
+      "planted": 6819,
+      "seedlings": 5366621
+    },
+    "2022": {
+      "planted": 3279,
+      "seedlings": 2606070
+    },
+    "2023": {
+      "planted": 1223,
+      "seedlings": 655563
+    },
+    "2024": {
+      "planted": 1353,
+      "seedlings": 804610
+    }
+  },
+  "Region 8": {
+    "2011": {
+      "planted": 8105,
+      "seedlings": 3984801
+    },
+    "2012": {
+      "planted": 8145,
+      "seedlings": 4077075
+    },
+    "2013": {
+      "planted": 10516,
+      "seedlings": 7577250
+    },
+    "2014": {
+      "planted": 19311,
+      "seedlings": 14829272
+    },
+    "2015": {
+      "planted": 32587,
+      "seedlings": 10682834
+    },
+    "2016": {
+      "planted": 16846,
+      "seedlings": 26085213
+    },
+    "2017": {
+      "planted": 15233,
+      "seedlings": 12490672
+    },
+    "2018": {
+      "planted": 10442,
+      "seedlings": 9462718
+    },
+    "2019": {
+      "planted": 1620,
+      "seedlings": 1772374
+    },
+    "2020": {
+      "planted": 3490,
+      "seedlings": 2550890
+    },
+    "2021": {
+      "planted": 7069,
+      "seedlings": 4850713
+    },
+    "2022": {
+      "planted": 3399,
+      "seedlings": 2355541
+    },
+    "2023": {
+      "planted": 1268,
+      "seedlings": 592541
+    },
+    "2024": {
+      "planted": 1403,
+      "seedlings": 727261
+    }
+  },
+  "Region 9": {
+    "2011": {
+      "planted": 4806,
+      "seedlings": 2306424
+    },
+    "2012": {
+      "planted": 6058,
+      "seedlings": 3040455
+    },
+    "2013": {
+      "planted": 20998,
+      "seedlings": 10494740
+    },
+    "2014": {
+      "planted": 19160,
+      "seedlings": 12132425
+    },
+    "2015": {
+      "planted": 29328,
+      "seedlings": 15987815
+    },
+    "2016": {
+      "planted": 20675,
+      "seedlings": 25765250
+    },
+    "2017": {
+      "planted": 16112,
+      "seedlings": 12953368
+    },
+    "2018": {
+      "planted": 11045,
+      "seedlings": 9813249
+    },
+    "2019": {
+      "planted": 1714,
+      "seedlings": 1838028
+    },
+    "2020": {
+      "planted": 3692,
+      "seedlings": 2645383
+    },
+    "2021": {
+      "planted": 7477,
+      "seedlings": 5030399
+    },
+    "2022": {
+      "planted": 3595,
+      "seedlings": 2442798
+    },
+    "2023": {
+      "planted": 1341,
+      "seedlings": 614491
+    },
+    "2024": {
+      "planted": 1484,
+      "seedlings": 754201
+    }
+  },
+  "Region 10": {
+    "2011": {
+      "planted": 4338,
+      "seedlings": 2151270
+    },
+    "2012": {
+      "planted": 8235,
+      "seedlings": 4513160
+    },
+    "2013": {
+      "planted": 13896,
+      "seedlings": 7118500
+    },
+    "2014": {
+      "planted": 14128,
+      "seedlings": 6807796
+    },
+    "2015": {
+      "planted": 12586,
+      "seedlings": 9598993
+    },
+    "2016": {
+      "planted": 21648,
+      "seedlings": 36057729
+    },
+    "2017": {
+      "planted": 11935,
+      "seedlings": 12306944
+    },
+    "2018": {
+      "planted": 8181,
+      "seedlings": 9323528
+    },
+    "2019": {
+      "planted": 1269,
+      "seedlings": 1746303
+    },
+    "2020": {
+      "planted": 2734,
+      "seedlings": 2513368
+    },
+    "2021": {
+      "planted": 5539,
+      "seedlings": 4779362
+    },
+    "2022": {
+      "planted": 2663,
+      "seedlings": 2320893
+    },
+    "2023": {
+      "planted": 993,
+      "seedlings": 583826
+    },
+    "2024": {
+      "planted": 1099,
+      "seedlings": 716563
+    }
+  },
+  "Region 11": {
+    "2011": {
+      "planted": 5634,
+      "seedlings": 2867000
+    },
+    "2012": {
+      "planted": 6250,
+      "seedlings": 3135499
+    },
+    "2013": {
+      "planted": 16855,
+      "seedlings": 8435010
+    },
+    "2014": {
+      "planted": 16224,
+      "seedlings": 8821866
+    },
+    "2015": {
+      "planted": 15935,
+      "seedlings": 9345315
+    },
+    "2016": {
+      "planted": 10920,
+      "seedlings": 17873301
+    },
+    "2017": {
+      "planted": 11454,
+      "seedlings": 9377415
+    },
+    "2018": {
+      "planted": 7852,
+      "seedlings": 7104168
+    },
+    "2019": {
+      "planted": 1218,
+      "seedlings": 1330616
+    },
+    "2020": {
+      "planted": 2624,
+      "seedlings": 1915089
+    },
+    "2021": {
+      "planted": 5316,
+      "seedlings": 3641689
+    },
+    "2022": {
+      "planted": 2556,
+      "seedlings": 1768430
+    },
+    "2023": {
+      "planted": 953,
+      "seedlings": 444853
+    },
+    "2024": {
+      "planted": 1055,
+      "seedlings": 545994
+    }
+  },
+  "Region 12": {
+    "2011": {
+      "planted": 5353,
+      "seedlings": 2722979
+    },
+    "2012": {
+      "planted": 8759,
+      "seedlings": 4404426
+    },
+    "2013": {
+      "planted": 15884,
+      "seedlings": 7909055
+    },
+    "2014": {
+      "planted": 15935,
+      "seedlings": 9345315
+    },
+    "2015": {
+      "planted": 16162,
+      "seedlings": 9647238
+    },
+    "2016": {
+      "planted": 31154,
+      "seedlings": 51901974
+    },
+    "2017": {
+      "planted": 14872,
+      "seedlings": 15963601
+    },
+    "2018": {
+      "planted": 10195,
+      "seedlings": 12093749
+    },
+    "2019": {
+      "planted": 1582,
+      "seedlings": 2265168
+    },
+    "2020": {
+      "planted": 3407,
+      "seedlings": 3260144
+    },
+    "2021": {
+      "planted": 6902,
+      "seedlings": 6199414
+    },
+    "2022": {
+      "planted": 3318,
+      "seedlings": 3010480
+    },
+    "2023": {
+      "planted": 1238,
+      "seedlings": 757293
+    },
+    "2024": {
+      "planted": 1370,
+      "seedlings": 929470
+    }
+  },
+  "Region 13": {
+    "2011": {
+      "planted": 4979,
+      "seedlings": 2509797
+    },
+    "2012": {
+      "planted": 7821,
+      "seedlings": 4787068
+    },
+    "2013": {
+      "planted": 12147,
+      "seedlings": 5828849
+    },
+    "2014": {
+      "planted": 18162,
+      "seedlings": 8647238
+    },
+    "2015": {
+      "planted": 21101,
+      "seedlings": 12119900
+    },
+    "2016": {
+      "planted": 30510,
+      "seedlings": 44297276
+    },
+    "2017": {
+      "planted": 15107,
+      "seedlings": 14525562
+    },
+    "2018": {
+      "planted": 10356,
+      "seedlings": 11004315
+    },
+    "2019": {
+      "planted": 1607,
+      "seedlings": 2061115
+    },
+    "2020": {
+      "planted": 3462,
+      "seedlings": 2966461
+    },
+    "2021": {
+      "planted": 7008,
+      "seedlings": 5640957
+    },
+    "2022": {
+      "planted": 3372,
+      "seedlings": 2739288
+    },
+    "2023": {
+      "planted": 1258,
+      "seedlings": 689074
+    },
+    "2024": {
+      "planted": 1390,
+      "seedlings": 845742
+    }
+  }
+}
